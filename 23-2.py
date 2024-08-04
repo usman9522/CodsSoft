@@ -1,0 +1,28 @@
+file1 = open('taskonea.txt' , 'r')
+file2 = open('taskoneb.txt' , 'r')
+file_new1 = open('tasktwoa.txt' , 'w')
+file_new2 = open('tasktwob.txt' , 'w')
+a = int(file1.readline())
+x = int(file2.readline())
+file_new1.write(f'{a}\n')
+file_new2.write(f'{x}\n')
+for i in range (a):
+    b = int(file1.readline())
+    c = int(file2.readline())
+    y = int(file1.readline())
+    z = int(file2.readline())
+    file_new1.write(f'{b}\n')
+    file_new2.write(f'{c}\n')
+    file_new1.write(f'{y}\n')
+    file_new2.write(f'{z}\n')
+    for j in range (b*c):
+        m = int(file1.readline())
+        n = int(file2.readline())
+        o = m + n
+        p = m - n
+        file_new1.write(f'{o}\n')
+        file_new2.write(f'{p}\n')
+file1.close()
+file2.close()
+file_new1.close()
+file_new2.close()
